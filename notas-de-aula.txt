@@ -1,0 +1,116 @@
+__ SINTAXE BÁSICA EM JAVASCRIPT __
+
+PROFª DIANA MARTINE
+github.com/dianamartine
+
+[1] QUE DANADO É JAVASCRIPT?
+
+	:: O que é JS?
+> linguagem de programação de alto nível
+	> se assemelha mais à linguagem humana
+> serve para criar scripts dinâmicos
+	> parte interativa do desenvolvimento
+> aplicações mais comuns: desenvolvimento de apps e páginas web
+
+	:: Ferramentas e extensões
+> IDE VSCode 
+> Extensão Live Server
+
+	:: Boas práticas
+> externar o arquivo de script
+	> usar o parâmetro src
+> carregar o script ao final do arquivo html
+	> antes do fechamento do body
+	> porque precisa ter a estrutura montada primeiro, para depois ter a parte funcional
+
+[2] ENTENDENDO VARIÁVEIS E SEUS VALORES
+
+	:: Como funciona a tipagem em JS?
+> tipagem: regras de uso de dados
+	> JS: tipagem fraca - declaração de forma dinâmica
+
+	:: O que são variáveis e como declarar
+> tipos primitivos: boolean, null, undefined, number, array, object e function
+> declaração:
+	> var - escopo global e local
+	      - pode ter seu valor alterado
+	      - por default: null
+	> let - escopo local de bloco
+	      - pode ter seu valor alterado
+	      - por default: null
+	> const - escopo local de bloco
+	       - somente leitura
+	       - valor inicial obrigatório
+	       - valor não pode ser alterado
+> escopo:
+	> escopo global - variável declarada fora de qualquer bloco
+			- visibilidade em todo o código
+	> escopo local  - variável declarada dentro de um bloco
+			- visibilidade disponível ou não
+> regras de uso:
+	> iniciar com letras, underscore ou cifrão
+	> não iniciar com número
+	> não usar espaço
+	> não usar palavras reservadas
+	> declarações no topo do bloco de código
+		> interpretador usa prática de host
+
+	:: Diferenças entre atribuição, comparação e comparação idêntica
+> atribuição: "="
+> comparação: "=="
+> comparação idêntica: "==="
+
+	:: Operadores aritméticos, relacionais e lógicos
+> operadores aritméticos (matemáticos):
+	> adição: "+"
+	> subtração: "-"
+	> multiplicação: "*"
+	> divisão real: "/"
+	> divisão inteira: "%"
+	> potenciação: "**"
+> operadores relacionais (relação entre os valores):
+	> maior que: ">"
+	> menor que: "<"
+	> maior ou igual a: ">="
+	> menor ou igual a: "<="
+> operadores lógicos:
+	> e: "&&"
+	> ou: "||"
+	> não: "!"
+
+[3] VETORES E OBJETOS
+
+	:: O que são vetores ou arrays
+> tipo de lista ou matriz de variáveis
+	> cada variável possui um índice (início em 0)
+	> os valores podem ser de tipos diferentes
+	> um array pode conter outros arrays dentro dele
+	> declaração: let array = ['string', 1, true];
+
+	:: Como manipular arrays
+> métodos:
+	> forEach(): itera um array
+	> push(): adiciona um elemento ao final
+	> pop(): remove o último elemento
+	> shift(): remove o primeiro elemento
+	> unshift(): adicona um item no início do array
+	> indexOf(): retorna o índice de um elemento
+	> splice(): remove ou substitui um item pelo índice
+	> slice(): retorna uma parte de um array existente
+
+	:: O que são objetos
+> dados que possuem propriedades e valores que definem suas características
+> declaração: entre chaves {}
+	> exemplo: var xicara = {cor: 'azul', tamanho: 'p', funcao: tomarCafe()}
+> assim como vetores, podem guardar outros objetos dentro dele
+
+	:: Desestruturando objetos
+> desestruturação: as propriedades de objetos podem ser atribuídas a variáveis, facilitando a manipulação do objeto
+> exemplo: var xicara = {cor: 'azul', tamanho: 'p', funcao: tomarCafe()}
+	   var cor = xicara.cor;
+	   var tamanho = xicara.tamanho;
+	   var funcao = tomarCafe();
+
+[4] ESTRUTURAS CONDICIONAIS - DECISÃO E REPETIÇÃO/ITERAÇÃO
+[5] FUNÇÕES E SUAS PARTICULARIDADES
+[6] APROFUNDANDO EM FUNÇÕES
