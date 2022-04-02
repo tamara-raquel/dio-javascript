@@ -112,5 +112,35 @@ github.com/dianamartine
 	   var funcao = tomarCafe();
 
 [4] ESTRUTURAS CONDICIONAIS - DECISÃO E REPETIÇÃO/ITERAÇÃO
+
+	:: O que são estruturas condicionais
+> são instruções para realizar determinadas tarefas a partir de uma condição, seja de decisão ou de repetição
+
+	:: Estruturas de decisão
+> if: estabelecer uma condição
+> else: no caso da condição não ser atendida
+> else if: caso haja mais de uma condição
+> ninho de if: um if dentro de outro
+> if ternário: verificação de uma linha usando if
+> switch/case: condições diversas
+
+	:: Estruturas de repetição
+> são estruturas condicionais que repetem uma instrução até atingir determinada condição
+> for: funciona como uma repetição de instrução até que a condição seja FALSA
+	> for([expressaoInicial]; [condicao]; [incremento]){declaracao}
+> for/in: funciona como uma repetição a partir e uma propriedade
+	> for ([indice] in [objeto ou array]) {declaracao};
+> for/of: funciona como uma repetição a partir de um valor
+	> for([indice] of [array]) {declaracao};
+	> o for/of não funciona com objetos pois as propriedades variam, diferentes do índice em um array que sempre serão número inteiros
+		> como pegar o valor assim mesmo?:
+		> for (i of object.propriedade) {concole.log(i);}
+> while: executa uma instrução enquanto uma determinada condição for VERDADEIRA, a verificação é feita ANTES da execução
+	> var a=0;
+	  while (a<10){ a++; console.log(a); }
+> do/while: executa uma instrução ATÉ QUE determinada condição seja FALSA, a verificação é feita DEPOIS da execução
+	> var a=0;
+	  do { a++; console.log(a); } while (a<10)
+
 [5] FUNÇÕES E SUAS PARTICULARIDADES
 [6] APROFUNDANDO EM FUNÇÕES
