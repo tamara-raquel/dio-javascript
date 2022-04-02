@@ -143,4 +143,41 @@ github.com/dianamartine
 	  do { a++; console.log(a); } while (a<10)
 
 [5] FUNÇÕES E SUAS PARTICULARIDADES
+
+	:: O que são funções?
+> são blocos de comandos e instruções para a execução de determinadas tarefas
+	
+	:: Como declarar funções
+> declaração: function nomeDaFuncao() {instrucao};
+> chamada: nomeDaFuncao();
+	> (): indicam que é um objeto do tipo function
+	> {}: indicam que é um bloco de instrução
+
+	:: Funções com parâmetros
+> as funções podem receber parâmetros, que servem como variáveis de estado
+> sua atribuição pode ser feita durante a chamada da função
+	> function nomeDaFuncao(parametro) { ${instrucao}; }
+	  nomeDaFuncao(valorDoParametro);
+
 [6] APROFUNDANDO EM FUNÇÕES
+	:: Tipos de funções
+> Funções declarativas
+	> function nomeDaFuncao(){ ${instrucao}; }
+	> o nome da função é obrigatório
+> Expressões de Funções
+	> são funções atribuídas a expressões.
+	> a nomeação desse tipo de função é opcional
+	> var funcao = function() { ${instrucao}; }; [sem nome]
+	> var funcao = function nomeDaFuncao() { ${instrucao}; }; [nome opcional]
+> Arrow Functions
+	> são funçõs de expressão de sintaxe curta
+	> são sempre anônimas - não podem nomeadas!
+	> declaração: "()", seguido de "=>" e depois "{}"
+	> var funcao = () => { ${instrucao}; };
+> Funções aritméticas
+	> Exemplo prático: calculadora
+	> Métodos nativos utilizados:
+		> Number(): para converter valores em números
+		> Prompt(): para registrar entradas de usuário
+		> Alert(): para mostrar mensagens ao usuário
+		> TemplateStrings: para usar strings junto com expressões
