@@ -1,0 +1,43 @@
+=== SINTAXE E OPERADORES ===
+
+Profª Stephany Nusch
+Github: stebsnusch
+
+:: OPERADORES
+
+Tipos de operadores
+- Atribuição:
+	=  : igual		-> x=y
+	+= : mais igual		-> x=x+y
+	*= : multiplicação igual-> x=x*y
+	/= : divisão igual	-> x=x/y
+	%= : módulo igual	-> x=x%y
+- Aritmética:
+	+  : soma
+	-  : subtração
+	*  : multiplicação
+	** : exponenciação
+	/  : divisão
+	%  : módulo
+	++ : incremento
+	-- : decremento
+- Comparação:
+	== : igual a
+	===: mesmo valor e mesmo tipo
+	!= : diferente
+	>  : maior que
+	<  : menor que
+	>= : maior ou igual
+	<= : menor ou igual
+Lógica:
+	&& : e lógico		-> duas verdades
+	|| : ou lógico		-> uma verdade
+	!  : não lógico		-> negação
+Condicional:
+	If Ternário:
+(condition) ? expression1 : expression2
+Equivalente a:
+if (condition)
+  statement1;
+else
+  statement2;
