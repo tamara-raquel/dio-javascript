@@ -1,0 +1,43 @@
+MÓDULOS
+
+O que são módulos?
+São arquivos JS que tem a capacidade de exportar e importar informações de outros arquivos do mesmo tipo
+> árvores de dependências
+
+> Vantagens:
+	- Organização do código
+	- Compartilhamento de variáveis em escopos diferentes
+	- Explicita as dependências dos arquivos
+
+Exportar módulos
+> Named exports
+	> quando quero exportar mais de um arquivo
+	> exportar arquivos individualmente
+	> export function mostraIdade(){}
+> Default exports
+	> só pode haver um por arquivo
+	> retorno padrão do arquivo (sem chaves, só nome)
+
+Importar módulos
+> Named exports:
+	> import {funcao, variavel, classe} from './arquivo.js'
+> Default exports:
+	> import valorDefault from './arquivo.js'
+> Usando apelidos:
+	> import {arquivo as Apelido} from './arquivo.js';
+	  Apelido.metodo();
+	> utilidade: usar duas funções com o mesmo nome, de dois arquivos diferentes
+	   cada uma com seu apelido, não haverá conflitos
+> Importando todos os dados de um arquivo:
+	> import * as INFOS from './arquivo.js';
+	  INFOS.metodoA();
+	  console.log(INFOS.variavel);
+
+Vinculando ao HTML
+> tag script com type="module"
+	<script type="module" src="./main.js"></script>
+> módulos sempre estão em "strict mode"
+> podem ser utilizadas as extensões .js e .mjs
+> para testes locais é necessário utilizar um servidor (ex: Live Server do VSCode)
+> ao importar, sempre lembrar da extensão (.js, .mjs)
+	> utilizar "./" como ponto de partida ao importar
