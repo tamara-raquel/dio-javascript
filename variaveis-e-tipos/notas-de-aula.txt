@@ -1,0 +1,114 @@
+ ___ VARIÁVEIS E TIPOS ___
+
+I) ATRIBUINDO VALORES
+
+	:: VARIÁVEIS
+hoisting: atribuir valor a uma variável antes de declará-la (var)
+redeclaração: só ocorre com o var (usa a palavra reservada)
+reatribuição: var e let (só o nome da variável recebe valor novo)
+
+	:: CONSTANTES
+declarada em SNAKE_UPPER_CASE
+escopo de bloco
+não faz hoisting
+
+	:: LET, VAR E CONST
+var e let: declarar valores dinâmicos
+var: escopo global
+let: escopo de bloco
+usar: camelCase
+
+		VAR		CONST		LET
+ESCOPO		GLOBAL/LOCAL	BLOCO		BLOCO
+REDECLARAÇÃO	SIM		NÃO		NÃO
+REATRIBUIÇÃO	SIM		NÃO		SIM
+HOISTING	SIM		NÃO		NÃO
+
+II) TIPOS
+> JS é uma linguagem fraca e de tipagem dinâmica
+	> antes de declarar um valor não precisa especificar o tipo
+
+	:: ESTRUTURA DE DADOS
+> tipos de dados:
+	> primitivos: não têm métodos dentro deles
+		> number
+		> string
+		> boolean
+		> null
+		> undefined
+	> não primitivos
+		> objects
+		> arrays
+
+	:: STRINGS
+> textos/caracteres
+> valores declarados entre aspas (simples/duplas) ou crases
+> template strings: ${variavel} - interpolação
+> concat: concatenação de strings - string1.concat(string2)
+> outra forma de concatenar: usando operador "+"
+	> concatenado = nome + "" + sobrenome ou
+	> concatenado = `${nome} ${sobrenome}`
+> new String: objeto do tipo string - posso iterar sobre cada caracter: string1[i]
+	> possui métodos
+> caracter de escape: "\"
+> length: tamanho da string
+> split: separa os argumentos da string - caracteres
+	> split com espaço: separa em palavras
+> includes: busca determinada palavra dentro da string (boolean)
+> startsWith/endsWith: verifica se começa/termina com uma letra, por exemplo (boolean)
+> replace: substituição - ex: frase.replace(",","!") substitui vírgula por exclamação
+> método .toString(): transforma para string outro tipo de dado
+
+	:: NUMBERS
+> inteiros/decimais
+> operações aritméticas
+> biblioteca Math e seus métodos
+> métodos: floor (arredonda para baixo) e ceil (arredonda para cima)
+> porcentagem: concatenação de número e string
+
+	:: BOOLEANS
+> verdadeiro ou falso
+> validar condicionais
+
+	:: ARRAYS
+> vetores
+> listas iteráveis de elementos
+> index: inicia em 0
+> declaração com []
+> objeto: new Array()
+> push(): adicionar elemento ao final
+> pop(): remove do final
+> shift(): tira o último elemento
+> unshift(): adiciona no começo
+> verifica se o array possui um determinado item:
+	> array.some(item => item === 5)
+> reverse: inverte a ordem todos os elementos
+
+	:: OBJETOS
+> estrutura tipo chave e valor
+> let person = { name: 'John', age: 20}
+		chave  valor  chave valor
+> adicionar valores: let obj = {}
+		     obj.name = 'Julia'
+		     obj = {name: 'Julia'}
+> Object.values(obj)/Object.keys(obj): retorna os valores/chaves do objeto
+> Acessando valores em um objeto:
+	person = {name: 'Julia', age: 20, address: 'Rua 2'}
+	person.name //'Julia'
+	person["name"] //'Julia'
+> acrescentando chaves-valores ao objeto:
+	person['favouriteFood'] = 'pizza'
+	person = {name: 'Julia', age: 20, address: 'Rua 2', favouriteFood: 'pizza'}
+
+	:: EMPTY, UNDEFINED E NULL
+> empty: sem nenhum valor declarado
+	> ex: string1 = ""; num1 = 0; obj1 = {}; array = []
+> null: valor nulo de propósito
+> undefined: valor inexistente, variável inexistente, não declarada
+> falsy: valores falsos, mas não o false do boleano
+
+III) ATIVIDADE PRÁTICA
+
+	:: VERIFICAR PALÍNDROMO
+
+	:: SUBSTITUIR NÚMEROS PARES
