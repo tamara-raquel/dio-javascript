@@ -1,0 +1,41 @@
+__ COLEÇÕES CHAVEADAS __
+
+I - MAP
+
+	Estrutura, Métodos e Map vs Objeto
+
+> é uma coleção
+> formato chave e valor
+> coleção de arrays no formato [chave, valor]
+> pode ser iterado por um looop for/of
+> declarado com new
+	const myMap = new Map()
+> métodos: para adicionar, ler e deletar
+	> adicionar: set
+	> ler: get
+	> deletar: delete
+> map vs objeto
+	> maps podem ter chaves de qualquer tipo
+		> objetos só podem ter chaves do tipo string
+	> maps possuem a propriedade length
+	> maps são mais fáceis de iterar
+	> utilizado quando o valor das chaves é desconhecido
+		> no objeto já conheço as chaves e chamo por elas
+		> no map, não sei as chaves e quero iterar por elas
+	> os valores têm o mesmo tipo
+		> no objeto os valores não precisam ter o mesmo tipo
+
+II - SET
+
+	Estrutura, Métodos e Set vs Array
+
+> são estruturas que armazenam valores únicos
+	> não pode conter valore repetidos, como o array
+> métodos: adicionar, consultar e deletar
+	> adicionar: add
+	> consultar: has
+	> deletar: delete
+> set vs array
+	> possui valores únicos
+	> em vez da propriedade length, consulta-se o número de registros pela propriedade size
+	> não possui os métodos map, filter, reduce, etc (que são métodos de arrays)
