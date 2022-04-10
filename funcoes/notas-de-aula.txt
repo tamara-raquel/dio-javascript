@@ -1,0 +1,134 @@
+ ___ FUNÇÕES ___
+
+I) TIPOS DE FUNÇÃO
+
+1. ESTRUTURA E FUNÇÃO ANÔNIMA
+> variáveis criadas dentro de uma função apenas podem ser utilizadas dentro dela
+	> não acessíveis fora da função - escopo
+> quando invocamos o "return" a função pára de ser executada
+> função anônima:
+	> uma variável pode armazenar uma função
+	   ex: const soma = function (a, b) { return a + b; }
+	       soma(1, 2) //3
+	       soma(5, 4) //9
+
+2. FUNÇÃO AUTOINVOCÁVEL E CALLBACKS
+IIFE (Immediately Invoked Function Expression)
+> uma função anônima entre parênteses, seguida por outro par de parênteses que representa sua chamada
+	> exemplo:
+	(	  
+	  function() {
+		let name = "Digital Innovation One"
+		return name;
+	  }
+	)();
+
+Callbacks
+> uma função passada como argumento para outra função
+> utilizando callbacks você tem maior controle da ordem de chamadas
+
+II) PARÂMETROS
+
+1. VALORES PADRÃO E OBJETO "ARGUMENTS"
+Pós-ES2015: Para setar um valor default (padrão) para determinado parâmetro, basta passá-lo na função (1 = default para num):
+	> function exponencial(array, num=1){
+		const result = [];
+		for(let i=0; i<array.length; i++){
+			result.push(array[i]**num);
+		}
+		return result;
+	   }
+
+Objeto "arguments"
+> um array com todos os parâmetros passados quando a função foi invocada
+> para quando não sei quantos parâmetros foram passados para uma função que aceita um número indefinido de argumentos
+
+2. ARRAYS E OBJETOS
+
+> Técnica Spread: uma forma de lidar separadamente com os elementos de um array
+	> o que era parte de um array se torna um elemento independente
+	function sum (x, y, z) {
+	   return x + y + z;
+	}
+	const numbers = [1, 2, 3];
+	console.log(sum(...numbers));
+	> se eu simplesmente passasse numbers como argumento para a função sum, não funcionaria pois numbers é um array com 3 elementos mas um objeto único
+	> porém, usando a técnica spread, ou seja, adicionando "..." antes do nome do array, passo cada elemento do array de forma individual para a função sum
+
+> Técnica Rest: combina os argumentos em um array
+	> oposto da técnica Spread
+	> o que era um elemento independente se torna parte de um array
+	function confereTamanho(...args) {
+	   console.log(args.length)
+	}
+	confereTamanho() //0
+	confereTamanho(1, 2) //2
+	confereTamanho(3, 4, 5) //3
+
+>Observação: Spread usado quando estou chamando a função e o Rest é usado quando estou declarando a função
+
+> Object Destructuring: ou desestruturação de objetos
+	> entre chaves podemos filtrar apenas os dados que nos interessam de um objeto
+	> a função vai procurar um argumento correspondente ao que estou chamando
+
+III) LOOPS
+1. IF/ELSE E SWITCH
+> para condicionais
+> switch: para muitas comparações
+	> compara tipo e valor (===)
+
+2. FOR E WHILE
+> loop dentro de elementos iteráveis (arrays, strings)
+> variação: for in
+	> para propriedades dentro de um objeto
+> variação: for of
+	> loop entre estruturas iteráveis (arrays, strings)
+
+IV) THIS
+1. O QUE É THIS
+> é um referência de contexto
+> útil para retornar atributos e métodos de objetos
+
+CONTEXTO		REFERÊNCIA
+Em um objeto (método)	Próprio objeto dono do método
+Sozinha			Objeto global(em navegadores)
+Função			Objeto global
+Evento			Elemento que recebeu o evento
+
+2. MANIPULANDO SEU VALOR
+> Método Call
+	> determina a que objeto quero que o this se refira
+	> também é possível passar parâmetros para essa função separando-os por vírgula
+> Função Apply
+	> parecida com o call
+	> a diferença é que quando for passar parâmetros para a função, são passados dentro de um array
+> Método Bind
+	> clona a estrutura da dunção onde é chamada e aplica o valor do objeto passado como parâmetro
+
+V) ARROW FUNCTIONS
+1. SINTAXE E OUTRAS RESTRIÇÕES
+> representada pela seta "=>"
+> referente a uma função anônima
+	const helloWorld = function(){
+	   return "Hello World";		=	const helloWorld = () => "Hello World";
+	}
+> sempre está atrelada a uma constante/variável para guardar seu valor
+> caso exista apenas uma linha, pode dispensar as chaves e o return
+> caso exista apenas um parâmetro, pode dispensar os parênteses
+	const soma = (a, b) => a+b;
+	soma(4, 6); //10
+	const soma = a => a;
+	soma(4); //4
+:: Restrições:
+> arrow function NÃO FAZ hoisting!
+	> tenho que sempre declarar a função antes de chamá-la
+> "this" será sempre o objeto global
+	> métodos para modifical seu valor não irão funcionar
+		> call, bind e apply não funcionam
+> não existe o objeto "arguments"
+> o construtor também não pode ser utilizado
+	> new
+> não fazer arrow functions sem serem métodos para objetos
+> para métodos comuns, sempre use funções comuns
+
+2. ATIVIDADE PRÁTICA
