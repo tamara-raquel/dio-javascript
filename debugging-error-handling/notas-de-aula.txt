@@ -1,0 +1,50 @@
+___ DEBUGGING E ERROR HANDLING ___
+
+I - ECMASCRIPT ERROR E DOMEXCEPTION
+
+ECMAScript Error
+> erro que ocorre em tempo de execução
+	ex: variável não declarada, sintaxe, falta ";", etc.
+> composto por: 
+	- mensagem
+	- nome
+	- linha
+	- call stack
+
+DOMException
+> no contexto de relacionar o código JS a uma página web
+> erros relacionados ao Document Object Model
+	> erros na estrutura da árvore de elementos
+
+II - TRATANDO ERROS
+
+	:: THROW, TRY/CATCH E FINALLY
+
+Diferença entre "throw" e "return"
+> Throw: mensagem com comportamento de erro
+> Return: simplesmente retorna a string ou o que você determina
+
+Implementação da declaração try/catch
+> dentro do bloco try verifico um pedaço de código
+> se tiver um erro, será capturado pelo catch
+
+Finally
+> é uma instrução que será chamada independente de haver um erro ou não
+> executado depois das verificações do try...catch normalmente
+
+III - CRIANDO ERROS
+
+	::O OBJETO ERROR
+
+> esse objeto aceita os parâmetros: mensagem, nome do arquivo e número da linha
+	new Error(message, fileName, lineNumber)
+> todos os parâmetros são opcionais
+	const MeuErro = Error('Mensagem Inválida');
+> ver a documentação para ver compatibilidades
+	> nome do arquivo e número da linha podem ser incompatíveis com alguns navegadores
+> o erro também pode ter um nome
+	MeuErro.name = 'InavlidMessage';
+> função stack: mostra o que foi executado e onde foi encontrado o erro
+	MeuErro.stack
+	"InavlidMessage: Mensagem Inválida\n  at  <anonymous>:3:17"
+	erro ocorreu na linha 3, coluna 17
