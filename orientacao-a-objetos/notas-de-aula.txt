@@ -1,0 +1,52 @@
+__ ORIENTAÇÃO A OBJETOS __
+
+I - PARADIGMAS E PILARES
+
+:: Paradigmas: Imperativo e Declarativo
+
+ - Imperativo: Procedural, Orientado a Objeto, Processamento Paralelo
+	> focam em COMO resolver os problemas
+
+ - Declarativo: Lógico, Banco de dados, Funcional
+					  - Dataflow
+	> O QUE fazer para resolver o problema
+
+> Na POO, os programas são "objetos" que possuem uma série de propriedades
+
+:: Pilares da POO: Abstração, Herança, Encapsulamento e Polimorfismo
+
+ - Abstração: partir da complexidade para a simplificação
+	> abstração é generalizar
+
+ - Herança: objetos filhos podem herdar propriedades e métodos do objeto pai
+	> os filhos têm também suas próprias particularidades
+
+ - Encapsulamento: cada classe tem propriedades e métodos independentes do restante do código
+	> se altero uma propriedade ou método na classe, não afeta o restante do código
+
+ - Polimorfismo: objetos podem herdar a mesma classe pai, mas se comportarem de forma diferente quando invocamos seus métodos
+	> ex: método falar
+
+II - PROTÓTIPOS E CLASSES
+
+:: Protótipos
+> protótipos em JS são como o "esqueleto" de todos os objetos
+	> todos os objetos em JS vão herdar características e métodos de um prototype
+	> __proto__:
+	> o objeto Object.prototype está no topo da cadeia
+
+:: Classes
+> classes não existem nativamente no JS
+	> JS não possui classes nativamente
+	> todas as classes são objetos e a herança se dá por protótipos
+> a partir do ES6: sintaxe de class
+	> por baixo dos panos, o que está acontecendo é a criação de objetos
+	> syntatic sugar: uma sintaxe feita para facilitar a escrita
+> constructor: constrói classes
+> getters e setters: para ter acesso a parâmetros
+	> get: retorna valor
+	> set: determina valor
+> super(): manda para a função pai os parâmetros da classe filha
+	> serve para utilizar as propriedades do construtor que existem na classe pai
+> métodos: é possível sobrescrever métodos
+	> criar métodos específicos para cada classe

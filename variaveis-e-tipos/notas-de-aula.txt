@@ -78,7 +78,7 @@ II) TIPOS
 > objeto: new Array()
 > push(): adicionar elemento ao final
 > pop(): remove do final
-> shift(): tira o último elemento
+> shift(): tira o primeiro elemento
 > unshift(): adiciona no começo
 > verifica se o array possui um determinado item:
 	> array.some(item => item === 5)

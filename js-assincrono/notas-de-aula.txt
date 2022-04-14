@@ -1,0 +1,37 @@
+__ JAVASCRIPT ASSINCRONO __
+
+I) ASSINCRONICIDADE
+
+:: Definição, Promises e Async/Await
+
+Conceito: Assíncrono - que não ocorre ou não se efetiva ao mesmo tempo
+
+O JS roda de maneira SÍNCRONA.
+
+Promises: objeto de processamento assíncrono
+	> Inicialmente, seu valor é desconhecido.
+	> Ela pode, então, ser resolvida ou rejeitada.
+- Uma promise pode ter 3 estados: 
+	1) Pending
+	2) Fulfilled
+	3) Rejected
+
+- Manipulação: Depois de executada uma promise, posso disparar uma sequencia de comandos
+	> usando await e then
+const myPromise = new Promise((resolve, reject) => {
+   window.setTimeout(() => {
+      resolve("Resolvida");
+   }, 2000);
+});
+await myPromise
+	.then((result) => result + " passando pelo then")
+	.then((result) => result + " e agora acabou!)
+	.catch((err) => console.log(err.message));
+//Após 2 segundos, retornará o valor da promise
+//"Resolvida passando pelo then e agora acabou!"
+Se um erro ocorrer, será capturado pelo catch
+
+
+II) CONSUMINDO APIs
+
+:: O que são APIs e Fetch

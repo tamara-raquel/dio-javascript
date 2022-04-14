@@ -30,7 +30,7 @@ II - SET
 	Estrutura, Métodos e Set vs Array
 
 > são estruturas que armazenam valores únicos
-	> não pode conter valore repetidos, como o array
+	> não pode conter valores repetidos, como o array
 > métodos: adicionar, consultar e deletar
 	> adicionar: add
 	> consultar: has

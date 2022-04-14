@@ -86,7 +86,7 @@ III) LOOPS
 
 IV) THIS
 1. O QUE É THIS
-> é um referência de contexto
+> é uma referência de contexto
 > útil para retornar atributos e métodos de objetos
 
 CONTEXTO		REFERÊNCIA
@@ -103,7 +103,7 @@ Evento			Elemento que recebeu o evento
 	> parecida com o call
 	> a diferença é que quando for passar parâmetros para a função, são passados dentro de um array
 > Método Bind
-	> clona a estrutura da dunção onde é chamada e aplica o valor do objeto passado como parâmetro
+	> clona a estrutura da função onde é chamada e aplica o valor do objeto passado como parâmetro
 
 V) ARROW FUNCTIONS
 1. SINTAXE E OUTRAS RESTRIÇÕES
@@ -120,7 +120,7 @@ V) ARROW FUNCTIONS
 	const soma = a => a;
 	soma(4); //4
 :: Restrições:
-> arrow function NÃO FAZ hoisting!
+> arrow function NÃO FAZEM hoisting!
 	> tenho que sempre declarar a função antes de chamá-la
 > "this" será sempre o objeto global
 	> métodos para modifical seu valor não irão funcionar
