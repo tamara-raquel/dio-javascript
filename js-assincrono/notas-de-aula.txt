@@ -25,13 +25,31 @@ const myPromise = new Promise((resolve, reject) => {
 });
 await myPromise
 	.then((result) => result + " passando pelo then")
-	.then((result) => result + " e agora acabou!)
+	.then((result) => result + " e agora acabou!)	//acumula resultado anterior
 	.catch((err) => console.log(err.message));
 //Após 2 segundos, retornará o valor da promise
 //"Resolvida passando pelo then e agora acabou!"
 Se um erro ocorrer, será capturado pelo catch
 
+Funções assíncronas: usam async e await
+> await: para parar o código até que eu tenha o resultado de uma promise
+> sem o await, o resultado de uma promise será outra promise
 
 II) CONSUMINDO APIs
 
 :: O que são APIs e Fetch
+
+APIs - Application Programming Interface
+> Uma API é a forma de intermediar os resultados do back-end com o que é apresentado no front-end
+> Você consegue acessá-la por meio de URLs
+	> JSON: resultados de APIs muitas vezes vê no formato .json, ou são enviados como .json (POST)
+
+Método Fetch
+> Sintaxe:
+	fetch(url, options)
+	   .then(response => response.json())
+	   .then(json => console.log(json))
+	//retorna uma Promise
+> A resposta precisa ser transformada para o formato .json
+> Como retorna uma promise, posso encadear a resposta com then
+> Como retorna uma promise, preciso usar o await quando usar fetch
